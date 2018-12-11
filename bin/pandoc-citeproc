@@ -1,0 +1,10 @@
+#!/bin/env bash
+
+if [ "${STAY}" = "true" ]
+then
+    ox-hugo_deps "pandoc-citeproc $@"
+else
+    ox-hugo_deps "cd ${PWD} && pandoc-citeproc $@ 2>&1 | tee ~/dev/ox-hugo/pandoc-citeproc.out"
+fi
+
+exit $?

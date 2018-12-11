@@ -1,0 +1,16 @@
+#!/bin/env bash
+
+# The username, host and port used to connect to a running ox-hugo_deps container
+readonly USER=
+readonly PORT=23
+readonly HOST="localhost"
+
+if [ -z ${USER} ]
+then
+   printf "ERROR: You have not set your username. Please edit ${0} and set USER, PORT and HOST for your environment.\n" >&2
+   exit 1
+fi
+
+ssh -Yt -p ${PORT} ${USER}@${HOST} "$@"
+
+exit $?

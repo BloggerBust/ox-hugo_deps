@@ -1,0 +1,10 @@
+#!/bin/env bash
+
+if [ "${STAY}" = "true" ]
+then
+    ox-hugo_deps "go run github.com/gohugoio/hugo $@"
+else
+    ox-hugo_deps "cd ${PWD} && go run github.com/gohugoio/hugo $@ 2>&1 | tee ~/dev/ox-hugo/hugo.out"
+fi
+
+exit $?

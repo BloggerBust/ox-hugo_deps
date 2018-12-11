@@ -1,0 +1,10 @@
+#!/bin/env bash
+
+if [ "${STAY}" = "true" ]
+then
+    ox-hugo_deps "pandoc $@"
+else
+    ox-hugo_deps "cd ${PWD} && pandoc $@ 2>&1 | tee ~/dev/pandoc.out"
+fi
+
+exit $?

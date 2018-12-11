@@ -1,0 +1,10 @@
+#!/bin/env bash
+
+if [ "${STAY}" = "true" ]
+then
+    ox-hugo_deps "go $@"
+else
+    ox-hugo_deps "cd ${PWD} && go $@ 2>&1 | tee ~/dev/ox-hugo/go.out"
+fi
+
+exit $?
