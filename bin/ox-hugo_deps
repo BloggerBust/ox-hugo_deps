@@ -1,7 +1,7 @@
 #!/bin/env bash
 
 # The username, host and port used to connect to a running ox-hugo_deps container
-readonly USER=dustfinger
+readonly USER=
 readonly PORT=23
 readonly HOST="localhost"
 
