@@ -4,7 +4,7 @@ if [ "${STAY}" = "true" ]
 then
     ox-hugo_deps "go $@"
 else
-    ox-hugo_deps "cd ${PWD} && go $@ 2>&1 | tee ~/dev/ox-hugo/go.out"
+    ox-hugo_deps "cd ${PWD} && go $@ 2>&1 | tee ~/dev/go.out"
 fi
 
 exit $?
