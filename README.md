@@ -1,6 +1,6 @@
 
 # Ox-hugo Dependency Image
-An explanation of what to do comming soon...
+I posted how to use ox-hugo_deps on my blog here: [ox-hugo Dependency Image](https://bloggerbust.ca/post/ox-hugo-dependency-image/)
 
 # Prerequisites #
 You must have docker installed build ox-hugo_deps_image. The following base images will be automatically installed.
